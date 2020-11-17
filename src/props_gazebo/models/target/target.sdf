@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <model name="Shootout_color">
+    <static>true</static>
+    <link name="base_link">
+      <collision name="body_collision">
+        <geometry>
+            <mesh>
+                <uri>model://props_gazebo/models/target/meshes/S2_collision.dae</uri>
+                <scale>0.001 0.001 0.001</scale>
+            </mesh>
+        </geometry>
+      </collision> 
+
+        <visual name="base_link">
+            <pose>0.0693 0.1796 -0.4599 0 0 0</pose>
+            <geometry>
+                <mesh>
+                    <uri>model://props_gazebo/models/target/meshes/S2_base.dae</uri>
+                    <scale>0.001 0.001 0.001</scale>
+                </mesh>
+            </geometry> 
+            <material> <!-- Base material -->
+                <ambient>0.1 0.1 0.1 1</ambient>
+                <diffuse>0.1 0.1 0.2 1</diffuse>
+                <specular>0 0 0 0</specular>
+                <emissive>0 0 0 1</emissive>
+            </material> <!-- Base material -->      
+        </visual>
+
+        <visual name="marco_link">
+        <pose>-0.238325677191784 -0.176250476814231 -0.455158299357056 1.57526740840593 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://props_gazebo/models/target/meshes/S2_marco.dae</uri>
+                <scale>0.001 0.001 0.001</scale>
+            </mesh>
+            </geometry>
+            <material>
+                <script>
+                    <uri>model://target/materials/scripts</uri>
+                    <uri>model://target/materials/textures</uri>
+                    <name>Gangster</name>
+                </script>
+            </material>
+        </visual>
+
+
+        <visual name="figures_link">
+            <pose>0.19331 -0.0008988 1.0302 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://props_gazebo/models/target/meshes/S2_figuras.dae</uri>
+                <scale>0.001 0.001 0.001</scale>
+            </mesh>
+            </geometry>
+            <material> <!-- Base material -->
+                <ambient>0.1 0.1 0.1 1</ambient>
+                <diffuse>0.1 0.1 0.2 1</diffuse>
+                <specular>0 0 0 0</specular>
+                <emissive>0 0 0 1</emissive>
+            </material> <!-- Base material -->  
+        </visual>
+
+    </link>
+  </model>
+</sdf>

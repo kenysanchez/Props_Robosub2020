@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Shootout2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -0.05 -0.1"
+        rpy="-1.5708 0 0" />
+      <mass
+        value="16.622" />
+      <inertia
+        ixx="3.7236"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.6485"
+        iyz="0.0"
+        izz="4.1059" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.1 0.4 -0.7"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Shootout2/meshes/Shootout2_colores.dae" />
+     </geometry>
+      
+      <material name="white">
+        <color rgba="${255/255} ${255/255} ${255/255} 1.0"/>
+      </material>
+
+      <gazebo reference="base_link">
+        <material>Gazebo/White</material>
+      </gazebo>
+
+     <!-- <material>
+       <script>
+        <uri>model:://props_gazebo/models/Shootout2/materials/scripts</uri>
+        <uri>model:://props_gazebo/models/Shootout2/materials/textures</uri>
+        <name>shootout2_gangster/Diffuse</name>
+       </script>
+     </material> -->
+
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.1 0.4 -0.70"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Shootout2/meshes/Shootout2_colores.dae" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

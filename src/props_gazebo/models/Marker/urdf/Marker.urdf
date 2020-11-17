@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="Marker">
+  <link name="Marker_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.35971" />
+      <inertia
+        ixx="0.000567"
+        ixy="0"
+        ixz="0"
+        iyy="0.002833"
+        iyz="0.0"
+        izz="0.002833" />
+    </inertial>
+
+    <visual>
+      <origin
+        xyz="0 -0.02 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Marker/meshes/Marker.dae" />
+      </geometry>
+      <material name = "orange"/>
+
+      <material name="orange">
+        <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+      </material>
+
+      <gazebo reference="Marker_Link">
+        <material>Gazebo/Orange</material>
+      </gazebo>
+    </visual>
+
+    <collision>
+      <origin
+        xyz="0 -0.02 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Marker/meshes/Marker.dae" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
