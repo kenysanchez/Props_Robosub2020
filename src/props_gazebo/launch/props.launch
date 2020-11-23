@@ -6,25 +6,9 @@
   </include>
 
 <!-- Spawn marker into Gazebo -->
-    <node name="spawn_urdf1" pkg="gazebo_ros" type="spawn_model" output="screen"
-            args="-x 2 -y 2 -file $(find props_gazebo)/models/Marker/urdf/Marker.urdf
-                            -urdf -model Marker" />
-    
-    <node name="spawn_urdf2" pkg="gazebo_ros" type="spawn_model" output="screen"
-            args="-x 0.1 -y 0.5 -file $(find props_gazebo)/models/Shootout/urdf/Shootout1.urdf
-                            -urdf -model Shootout" />
-    
-    <node name="spawn_urdf3" pkg="gazebo_ros" type="spawn_model" output="screen"
-            args="-x 0.6 -y 1 -file $(find props_gazebo)/models/Shootout2/urdf/Shootout2.urdf
-                            -urdf -model Shootout2" />
-
-    <node name="spawn_urdf4" pkg="gazebo_ros" type="spawn_model" output="screen"
-            args="-x -2 -y 1 -file $(find props_gazebo)/models/Bin/urdf/Bin.urdf
-                            -urdf -model Bin" />
-
-     <node name="spawn_urdf5" pkg="gazebo_ros" type="spawn_model" output="screen"
-            args="-x -1 -y 1 -file $(find props_gazebo)/models/target/target.sdf
-                            -sdf -model Shootout_color" />
-    
+  <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+            args="-x 0.1 -y 0.5 -file $(find props_gazebo)/models/ShootingTarget/ShootingTarget.sdf
+                            -sdf -model ShootingTarget" />
+  
     
 </launch>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="Marco">
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.35971" />
+      <inertia
+        ixx="0.000567"
+        ixy="0"
+        ixz="0"
+        iyy="0.002833"
+        iyz="0.0"
+        izz="0.002833" />
+    </inertial>
+
+    <visual>
+      <origin
+        xyz="0 0 2"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Marco/meshes/marcogman.dae" />
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin
+        xyz="0 2 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh scale = "0.001 0.001 0.001"
+          filename="package://props_gazebo/models/Marco/meshes/marcogman.dae" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
